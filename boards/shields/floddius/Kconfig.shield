@@ -1,0 +1,5 @@
+config SHIELD_FLODDIUS_LEFT
+  def_bool $(shields_list_contains,floddius_left)
+
+config SHIELD_FLODDIUS_RIGHT
+  def_bool $(shields_list_contains,floddius_right)
