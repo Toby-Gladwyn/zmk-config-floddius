@@ -1,0 +1,17 @@
+if SHIELD_FLODDIUS_LEFT
+
+  config ZMK_KEYBOARD_NAME
+    default "floddius"
+
+  config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_FLODDIUS_LEFT || SHIELD_FLODDIUS_RIGHT
+
+  config ZMK_SPLIT
+    default y
+
+endif
+  
