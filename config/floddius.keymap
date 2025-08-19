@@ -48,29 +48,29 @@
 // |        |      |      |      |       |      |  |      |       |      |      |      |       |
 // |  CAPS  |      |      |      |       |      |  |      |       |      |      |      |       |
 // |        |      |      |      |       |      |  |      |       |      |      |      |       |
-//                        |      |       |      |  |      |       |      |
+//                        |      |       | TO 3 |  |      |       |      |
                         bindings = <
    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp C_VOL_DN  &kp C_MUTE       &kp C_PP  &kp C_VOL_UP  &trans     &trans     &trans     &trans
    &trans      &trans        &trans        &trans        &trans        &trans           &trans    &trans        &trans     &trans     &trans     &trans
    &kp CAPS    &trans        &trans        &trans        &trans        &trans           &trans    &trans        &trans     &trans     &trans     &trans
    &trans      &trans        &trans        &trans        &trans        &trans           &trans    &trans        &trans     &trans     &trans     &trans
-                                           &trans        &trans        &to 3            &trans    &trans        &trans
+                                           &trans        &to 3         &trans            &trans    &trans        &trans
                         >;
                 };
 
                 num_layer {
 // -----------------------------------------------------------------------------------------
-// | BT_CLR | BT_1 | BT_2 | BT_3 | VOL_D | MUTE |  | PLAY | VOL_U |      |      |      |       |
-// |        |      |      |      |       |      |  |      |       |      |      |      |       |
-// |  CAPS  |      |      |      |       |      |  |      |       |      |      |      |       |
-// |        |      |      |      |       |      |  |      |       |      |      |      |       |
-//                        |      |       |      |  |      |       |      |
+// |  ESC |      |   7  |   8  |   9  |      | |      |      |      |      |      |       |
+// |  TAB |   y  |   4  |   5  |   6  |      | |      |      |      |      |      |       |
+// | SHFT |   z  |   1  |   2  |   3  |      | |      |      |      |      |      |       |
+// | CTRL |  ALT |   0  |  DOT |   l  |   F  | |      |      |      |      |      |       |
+//                      |  BSPC|   -  |  ENT | |  MO2 |      |      |
                         bindings = <
-   &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp C_VOL_DN  &kp C_MUTE       &kp C_PP  &kp C_VOL_UP  &trans     &trans     &trans     &trans
-   &trans      &trans        &trans        &trans        &trans        &trans           &trans    &trans        &trans     &trans     &trans     &trans
-   &kp CAPS    &trans        &trans        &trans        &trans        &trans           &trans    &trans        &trans     &trans     &trans     &trans
-   &trans      &trans        &trans        &trans        &trans        &trans           &trans    &trans        &trans     &trans     &trans     &trans
-                                           &trans        &trans        &trans           &mo 2     &trans        &trans
+   &kp ESC    &trans      &kp N7      &kp N8      &kp N9      &trans           &trans    &trans      &trans     &trans     &trans     &trans
+   &kp TAB    &kp Y       &kp N4      &kp N5      &kp N6      &trans           &trans    &trans      &trans     &trans     &trans     &trans
+   &kp LSHFT  &kp Z       &kp N1      &kp N2      &kp N3      &trans           &trans    &trans      &trans     &trans     &trans     &trans
+   &kp LCTRL  &kp LALT    &kp N0      &kp DOT     &kp L       &kp f            &trans    &trans      &trans     &trans     &trans     &trans
+                                      &kp BSPC    &kp MINUS   &kp RET          &mo 2     &trans      &trans
                         >;
                 };
         };
