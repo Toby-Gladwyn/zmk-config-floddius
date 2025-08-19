@@ -2,6 +2,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define DEFAULT 0
+#define LOWER 1
+#define RAISE 2
+#define NUM 3
+
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -33,7 +38,7 @@
    &trans      &trans     &kp UP     &trans     &trans    &trans         &trans    &trans    &trans     &trans     &trans     &trans
    &kp LSHFT   &kp LEFT   &kp DOWN   &kp RIGHT  &trans    &trans         &trans    &trans    &trans     &trans     &kp EQUAL  &trans
    &kp LGUI    &trans     &trans     &trans     &kp NUBS  &kp LBRC       &kp RBRC  &kp SEMI  &kp NUHS   &kp FSLH   &kp MINUS  &kp RSHFT
-                                     &trans     &trans    &trans         &trans    &trans    &trans
+                                     &trans     &trans    &trans         &to 3     &trans    &trans
                         >;
                 };
 
@@ -49,8 +54,22 @@
    &trans      &trans        &trans        &trans        &trans        &trans           &trans    &trans        &trans     &trans     &trans     &trans
    &kp CAPS    &trans        &trans        &trans        &trans        &trans           &trans    &trans        &trans     &trans     &trans     &trans
    &trans      &trans        &trans        &trans        &trans        &trans           &trans    &trans        &trans     &trans     &trans     &trans
-                                           &trans        &trans        &trans           &trans    &trans        &trans
+                                           &trans        &trans        &to 3            &trans    &trans        &trans
                         >;
                 };
+
+                num_layer {
+// -----------------------------------------------------------------------------------------
+// | BT_CLR | BT_1 | BT_2 | BT_3 | VOL_D | MUTE |  | PLAY | VOL_U |      |      |      |       |
+// |        |      |      |      |       |      |  |      |       |      |      |      |       |
+// |  CAPS  |      |      |      |       |      |  |      |       |      |      |      |       |
+// |        |      |      |      |       |      |  |      |       |      |      |      |       |
+//                        |      |       |      |  |      |       |      |
+                        bindings = <
+   &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp C_VOL_DN  &kp C_MUTE       &kp C_PP  &kp C_VOL_UP  &trans     &trans     &trans     &trans
+   &trans      &trans        &trans        &trans        &trans        &trans           &trans    &trans        &trans     &trans     &trans     &trans
+   &kp CAPS    &trans        &trans        &trans        &trans        &trans           &trans    &trans        &trans     &trans     &trans     &trans
+   &trans      &trans        &trans        &trans        &trans        &trans           &trans    &trans        &trans     &trans     &trans     &trans
+                                           &trans        &trans        &trans           &mo 2     &trans        &trans
         };
 };
