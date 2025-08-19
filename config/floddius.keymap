@@ -71,7 +71,7 @@
    &kp CAPS    &trans        &trans        &trans        &trans        &trans           &trans    &trans        &trans     &trans     &trans     &trans
    &trans      &trans        &trans        &trans        &trans        &trans           &trans    &trans        &trans     &trans     &trans     &trans
                                            &trans        &trans        &trans           &mo 2     &trans        &trans
-                        };
+                        >;
                 };
         };
 };
