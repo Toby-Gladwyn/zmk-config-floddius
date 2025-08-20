@@ -61,9 +61,9 @@
                 num_layer {
 // -----------------------------------------------------------------------------------------
 // |  ESC |      |   7  |   8  |   9  |      | |      |      |      |      |      |       |
-// |  TAB |   y  |   4  |   5  |   6  |      | |      |      |      |      |      |       |
-// | SHFT |   z  |   1  |   2  |   3  |      | |      |      |      |      |      |       |
-// | CTRL |  ALT |   0  |  DOT |   l  |   F  | |      |      |      |      |      |       |
+// |  TAB |   Y  |   4  |   5  |   6  |      | |      |      |      |      |      |       |
+// | SHFT |   Z  |   1  |   2  |   3  |      | |      |      |      |      |      |       |
+// | CTRL |  ALT |   0  |  DOT |   L  |   F  | |      |      |      |      |      |       |
 //                      |  BSPC|   -  |  ENT | |  MO2 |      |      |
                         bindings = <
    &kp ESC    &trans      &kp N7      &kp N8      &kp N9      &trans           &trans    &trans      &trans     &trans     &trans     &trans
